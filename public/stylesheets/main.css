@@ -1,0 +1,304 @@
+a:link { color:#542f29; text-decoration: none;}
+a:visited { color:#542f29; text-decoration: none;}
+a:hover { color:#7f473e; text-decoration: underline;}
+
+.general_content {
+  color: #542F29;
+  background-color: #FFFEF1;
+  text-align:left;
+  text-indent:25px;
+  padding: 10px 25px;
+  width: 670px;
+  margin-left: 230px;
+}
+
+.message_header {
+  color: #FFFEF1;
+  background-color: #542F29;
+  text-align:left;
+  padding: 2px 10px;
+  margin: 2px;
+  font-size:14px;
+}
+.message {
+  color: #542F29;
+  background-color: #FFFEF1;
+  text-align:left;
+  padding: 15px 20px;
+  border: 1px solid #542F29;
+  min-height: 150px; 
+}
+
+.message textarea {
+  color: #542F29;
+  background-color: #FFFEF1;
+  border: 0px solid #542F29;
+  min-height: 150px;
+  width: 430px; 
+}
+
+a.menu_option {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  color: #FFFEF1;
+  text-align: center;
+  background-color: #542F29;
+  padding: 5px 1em;
+  display: block;
+  list-style: none outside none;
+  width: 130px;
+  margin: 5px 10px;
+  float:left;
+  font-variant:small-caps;
+  font-size:16px;
+}
+
+a:hover.menu_option {
+  text-decoration:none;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  color: #341F19;
+  text-align: center;
+  background-color: #E2C6BD;
+  padding: 5px 1em;
+  display: block;
+  list-style: none outside none;
+  width: 130px;
+  margin: 5px 10px;
+  float:left;
+  font-variant:small-caps;
+  font-size:16px;
+}
+
+a.link_button {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  color: #FFFEF1;
+  text-align: center;
+  background-color: #542F29;
+  padding: 2px 10px;
+  display: block;
+  list-style: none outside none;
+  width: 100px;
+  margin: 5px 10px;
+  font-variant:small-caps;
+  font-size:12px;
+  font-weight: bold;
+}
+
+a:hover.link_button {
+  text-decoration:none;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  color: #341F19;
+  text-align: center;
+  background-color: #E2C6BD;
+  padding: 2px 10px;
+  display: block;
+  list-style: none outside none;
+  width: 100px;
+  margin: 5px 10px;
+  font-variant:small-caps;
+  font-size:12px;
+  font-weight: bold;
+}
+
+
+.usermenucontainer {
+  float: left;
+  background-color:#FFFEF1;
+  padding: 5px 1em;
+  margin-left: 3px;
+}
+
+.usermenucontent {
+  width: 113px;
+  clear: both;
+  color:#542F29; 
+  font-size:12px;
+  font-variant:small-caps;
+  margin-top:15px;
+  padding: 5px 15px;
+  text-align: left;
+}
+.paginate {
+  color: #542F29;
+  background-color: #FFFEF1;
+  text-align:left;
+  padding: 5px 16px;
+  margin: 2px 340px;
+  width:450px;
+  text-align: center;
+  font-family: "book antiqua", serif;
+  font-size: 12px;
+}
+
+.notice {
+  width:450px;
+  color:#542F29;
+  text-align: center;
+  font-family: "book antiqua", serif;
+  font-size: 12pt;
+  font-variant: small-caps;
+  font-style: bold;
+  text-align: center;
+  background-color: #FFFEF1;
+  margin: 15px 340px;
+  padding: 5px 1em;
+}
+.tabel {
+  color:#542F29;
+  margin-left:250px;
+  font-family: "book antiqua", serif;
+  font-size: 10pt;
+  font-style: bold;
+  text-align: left;
+  background-color: #FFFEF1;
+  padding: 5px 1em;
+}
+
+.tabel_bottom {
+  color:#542F29;
+  margin-left:250px;
+  font-family: "book antiqua", serif;
+  font-size: 10pt;
+  font-style: bold;
+  text-align: left;
+  background-color: #FFFEF1;
+  padding: 5px 1em;
+}
+
+.tabel_bottom input{
+  padding: 2px 1em;
+  background-color: #542F29;
+  color: #FFFEF1;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-family: "book antiqua", serif;
+  font-variant: small-caps;
+}
+
+.tabel textarea {
+  height: 50px;
+  width:  250px;
+}
+
+.tabel input {
+  width:  250px;
+}
+
+.newuser {
+  color:#542F29;
+  margin-left:250px;
+  font-family: "book antiqua", serif;
+  font-size: 10pt;
+  font-style: bold;
+  text-align: left;
+  background-color: #FFFEF1;
+  padding: 5px 1em;
+}
+
+.error {
+  color: red;
+  margin-left:auto;
+  margin-right:auto;
+  font-family: "book antiqua", serif;
+  font-size: 10pt;
+  font-style: bold;
+  text-align: left;
+  background-color: #FFFEF1;
+  width: 60%;
+  padding: 5px 1em;
+}
+
+#header .container {
+  width: 1000px;
+  min-height: 550px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-bottom:15px;
+  background-image: url("/images/antique_paper.jpg");
+  border-top: 1px solid #542f29;
+  border-left: 1px solid #542f29;
+  border-right: 2px solid #542f29;
+  border-bottom: 2px solid #542f29;
+  }
+#header .content {
+  float:left;
+  background-color: #FFFEF1;
+  height: 120px;
+  padding:1em;
+  margin:3px;
+  color:#542f29;
+	font-family: "book antiqua", serif;
+	font-size: 12px;
+	text-decoration: none;
+}
+#header h1 {
+  font-size: 18px;
+	font-family: "book antiqua", serif;
+	text-align:left;
+  text-shadow: #000000 1px 2px 6px ;
+}
+
+.text1 {
+			color:#542f29;
+			font-family: "book antiqua", serif ;
+			font-size: 10pt;
+			text-align: left;
+			background-color:fffef1;
+			border: 1pt solid #542f29;
+			width: 70%;
+			padding: 5px 1em;
+}
+
+.text2	{
+                        color:#542f29;
+                        font-family: "book antiqua", serif ;
+                        font-size: 10pt;
+                        text-align: right;
+                        background-color:#fffef1;
+                        border: 1pt solid #542f29;
+                        width: 70%;
+                        padding: 5px 1em;
+
+}
+.text3 {
+                        color:#542f29;
+                        font-family: "book antiqua", serif;  
+                        font-size: 16pt;
+			font-style: bold;
+                        text-align: left;
+                        background-color:fffef1;
+                        border: 1pt thin #542f29; 
+			width: 70%;
+                        padding: 1em 2em;
+
+}
+#header .text4 {
+                        color:#542F29;
+                        margin-left:auto;
+                        margin-right:auto;
+                        font-family: "book antiqua", serif;
+                        font-size: 10pt;
+                        font-style: bold;
+                        text-align: left;
+                        background-color: #FFFEF1;
+                        border: 1pt solid #542F29;
+                        width: 70%;
+                        padding: 10px 1em;
+                        text-indent: 20px;
+
+}
+#header .btn {
+			font-size: 10pt;
+			font-style: bold;
+			text-align: center;
+                        color:#542f29;
+                        background-color: fffef1;
+                        border: 1pt solid #542f29;
+                        padding: 10px 10px 10px 10px;
+                        text-align: center;
+}
+
+

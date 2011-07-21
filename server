@@ -1,0 +1,12 @@
+Script started on Wed 17 Nov 2010 01:21:05 PM EET
+]0;root@linux:/var/www/html/alumni[root@linux alumni]# /etc/init.d/httpd restart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K/etc/init.d/httpd restart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim /etc/httpd/conf/httpd.conf [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P/etc/init.d/httpd restart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K/etc/init.d/httpd restart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K/etc/init.d/httpd restart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kps
+  PID TTY          TIME CMD
+ 1067 pts/1    00:00:00 bash
+ 1083 pts/1    00:00:00 ps
+]0;root@linux:/var/www/html/alumni[root@linux alumni]# ps/etc/init.d/httpd restart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps[K[Kscript /server
+Script started, file is /server
+]0;root@linux:/var/www/html/alumni[root@linux alumni]# /etc/init.d/httpd restart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim /etc/httpd/conf/httpd.conf [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P/etc/init.d/httpd restart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim /etc/httpd/conf/httpd.conf [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P/etc/init.d/httpd restart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ks[Kexit
+Script done, file is /server
+]0;root@linux:/var/www/html/alumni[root@linux alumni]# exit
+
+Script done on Wed 17 Nov 2010 01:21:45 PM EET

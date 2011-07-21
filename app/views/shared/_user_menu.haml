@@ -1,0 +1,18 @@
+%div.usermenucontainer
+  %div.usermenucontent
+    =link_to "Date personale", "/users/#{@user.id}/accountInformation"
+  %div.usermenucontent
+    =link_to "Mesaje (#{current_user.messages.count(:conditions => ["r = 0"])})", "/users/#{current_user.id}/messages"
+  %div.usermenucontent
+    =link_to "Schimbare parola", "/users/#{current_user.id}/edit"
+  %div.usermenucontent
+    =link_to "Cautare alumni", "/users/#{current_user.id}/search"
+  %div.usermenucontent
+    - if @user.accountInformation && @user.accountInformation.promotia
+      =link_to "Promotia (#{@user.accountInformation.promotia})", "/users/#{@user.id}/promotia/"
+  - if current_user.role == "admin"
+    %hr{:style => "margin: 10px 0px;"}
+    %div.usermenucontent
+      [ADMIN]
+    %div.usermenucontent
+      =link_to "Workshops", "/workshopreg"  

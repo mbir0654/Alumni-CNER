@@ -1,0 +1,23 @@
+Script started on Wed 17 Nov 2010 07:58:45 PM EET
+]0;myh@myh-laptop: ~/alumni/appmyh@myh-laptop:~/alumni/app$ ssh root@123linkit.com[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kvim 
+controllers/ helpers/     models/      typescript   views/       
+]0;myh@myh-laptop: ~/alumni/appmyh@myh-laptop:~/alumni/app$ vim 
+controllers/ helpers/     models/      typescript   views/       
+]0;myh@myh-laptop: ~/alumni/appmyh@myh-laptop:~/alumni/app$ vim [K[K[K[Kssh 192.168.31.1[2Pcript/server [4Pcd alumni/rake routesdb:migrate[4Proutes[1Pcd alumni/script/server sh 192.168.31.1[K^C
+]0;myh@myh-laptop: ~/alumni/appmyh@myh-laptop:~/alumni/app$ ^C
+]0;myh@myh-laptop: ~/alumni/appmyh@myh-laptop:~/alumni/app$ vim models/user.rb 
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"models/user.rb" 6L, 207C[>c[1;1H[35mclass[m [32mUser[m < [32mActiveRecord[m::[32mBase[m
+  has_many [31m:messages[m
+  has_one [31m:accountInformation[m, [31m:dependent[m => [31m:destroy[m
+  accepts_nested_attributes_for [31m:accountInformation[m, [31m:allow_destroy[m => [31mtrue[m
+  acts_as_authentic
+[35mend[m
+[1m[34m~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H1,1[11CAll]2;user.rb (~/alumni/app/models) - VIM]1;user.rb[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;1H[K[24;1H:[?12l[?25hq[?25l[?12l[?25h[?25l]2;myh@myh-laptop: ~/alumni/app]1;myh@myh-laptop: ~/alumni/app[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;myh@myh-laptop: ~/alumni/appmyh@myh-laptop:~/alumni/app$ vim models/views[K[K[K[K[K[K[K[K[K[K[K[K[Kv[K views/
+account_informations/ messages/             user_sessions/
+general/              shared/               
+layouts/              users/                
+]0;myh@myh-laptop: ~/alumni/appmyh@myh-laptop:~/alumni/app$ vim views/users/new.html.haml 
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"views/users/new.html.haml" 15L, 596C[>c[1;1H[35m%[m[33mtable[m[35m{[m[31m:style[m => [35m"[m[31mmargin-left:auto;margin-right:auto;text-align:left;[m[35m"}[m
+  [35m-[m form_for [36m@user[m [33mdo[m |[36mf[m|
+    [35m-[m [33mif[m f.error_messages != [35m""[m[4;6H [35m%[m[33mdiv[m[35m.[m[32merror[m[35m=[m f.error_messages
+    [35m%[m[33mtr[m[35m.[m[32mnewuser[m[6;6H [35m%[m[33mtd[m[35m.[m[3

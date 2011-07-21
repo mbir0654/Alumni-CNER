@@ -1,0 +1,54 @@
+=render "/shared/user_menu"
+- if current_user.role == "admin"
+  %div.notice{:style => "margin-bottom: 3px;"}
+    =@total
+    absolventi inscrisi
+  %table{:style => "width:780px;margin-left:200px;text-align:left;"}
+    -if @total>10
+      %div.paginate
+        =will_paginate @users
+    %tr
+      %th.tabel Nume
+      %th.tabel Prenume
+      %th.tabel Specializare
+      %th.tabel Domeniu curent
+      %th.tabel Email
+      %th.tabel 
+    -@users.each do |u|
+      -if u.accountInformation
+        %tr
+          %td.tabel= u.accountInformation.nume
+          %td.tabel= u.accountInformation.prenume
+          %td.tabel= u.accountInformation.specializare
+          %td.tabel= u.accountInformation.domeniucurent
+          %td.tabel= u.accountInformation.email
+          %td.tabel
+            =link_to "trimitere mesaj", new_user_message_path(u)
+      -else
+        %tr
+          %td.tabel{:colspan=>5} Absolventul nu a salvat datele personale
+          %td.tabel
+            =link_to "trimitere mesaj", new_user_message_path(u)
+
+- else
+  %table{:style => "width:680px;margin-left:240px;text-align:left;"}
+    -if @total>10
+      %div.paginate
+        =will_paginate @users
+    %tr
+      %th.tabel Nume
+      %th.tabel Prenume
+      %th.tabel Specializare
+      %th.tabel Domeniu curent
+      %th.tabel Promotia
+      %th.tabel 
+    -@users.each do |u|
+      -if u.accountInformation
+        %tr
+          %td.tabel= u.accountInformation.nume
+          %td.tabel= u.accountInformation.prenume
+          %td.tabel= u.accountInformation.specializare
+          %td.tabel= u.accountInformation.domeniucurent
+          %td.tabel= u.accountInformation.promotia
+          %td.tabel
+            =link_to "trimitere mesaj", new_user_message_path(u)

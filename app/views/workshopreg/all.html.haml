@@ -1,0 +1,35 @@
+%table{:class=>"text4", :style => "width:90%;"}
+  %tr
+    %td Nume si prenume
+    %td Clasa
+    %td Email
+    %td Optiunea 1
+    %td Optiunea 2
+    %td Optiunea 3
+  - @reg.each do |r|
+    %tr
+      %td= r.nume
+      %td= r.clasa
+      %td= r.email
+      %td
+        - if r.opt1 == 1
+          Scriere CV si scrisoare de intentie
+        - if r.opt1 == 2
+          Scriere de proiecte
+        - if r.opt1 == 3
+          Academic writing
+      %td
+        - if r.opt2 == 1
+          Scriere CV si scrisoare de intentie
+        - if r.opt2 == 2
+          Scriere de proiecte
+        - if r.opt2 == 3
+          Academic writing
+      %td
+        - if r.opt3 == 1
+          Scriere CV si scrisoare de intentie
+        - if r.opt3 == 2
+          Scriere de proiecte
+        - if r.opt3 == 3
+          Academic writing
+	

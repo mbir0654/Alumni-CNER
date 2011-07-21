@@ -1,0 +1,14 @@
+%br
+%br
+%br
+%div{:style =>"text-align:right;" }
+  - if current_user.nil?
+    = link_to "Login", login_path
+    |
+    = link_to "Inregistrare", new_user_path
+
+  - unless current_user.nil?
+    %div{:class => ""}
+      = "Bine ai venit, #{current_user.username}"
+      %br
+      = link_to "Logout", logout_path

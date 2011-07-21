@@ -1,0 +1,25 @@
+!!!
+%html
+  %head= render "/shared/head"
+  %body
+    #header
+      %div.container
+        %div.content{:style => "width:150px;"}
+          %img{:src => "/images/racovita.png", :style => "margin-left:20px;margin-top:5px;height:110px;"}
+        %div.content{:style => "width:510px;"}
+          %h1 
+            Colegiul Na&#355;ional "Emil Racovi&#355;&#259;"
+            %br
+            Cluj-Napoca
+            %br
+            Alumni
+        %div.content{:style => "width:250px;"}
+          = render "/shared/nav"
+        %div{:style => "clear:both;"} 
+          = render "/shared/menu"                
+          = yield
+      %div{:style => "margin-top:5px; text-align:center;margin-left:auto;margin-right:auto;font-size:11px;"}
+        ©
+        =Time.now.year
+        CNER Alumni
+          

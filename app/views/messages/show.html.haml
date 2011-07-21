@@ -1,0 +1,19 @@
+=render "/shared/user_menu"
+%div{:style => "width:480px;margin-left:340px;text-align:left;"}
+  %div.message_header
+    Expeditor:
+    =@message.sent_from
+  %div.message_header
+    Data:
+    =@message.created_at
+  %div.message_header
+    Subiect:
+    =@message.subject
+  %div.message
+    %textarea{:readonly => "readonly"}
+      =@message.message
+  %div{:align => "center"}   
+    =link_to "Raspunde", new_user_message_path(@message.sent_from), {:class => "link_button"}
+ 
+  
+  

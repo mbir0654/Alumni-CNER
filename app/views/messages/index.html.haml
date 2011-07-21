@@ -1,0 +1,28 @@
+=render "/shared/user_menu"
+- if @total == 0
+  %div.notice Nu aveti nici un mesaj
+- else
+  %table{:style => "width:720px;margin-left:230px;text-align:left;"}
+    -if @total>10
+      %div.paginate
+        =will_paginate @messages
+    %tr
+      %th.tabel Expeditor
+      %th.tabel Subiect
+      %th.tabel Stare
+      %th.tabel{:style=> "width: 120px;"}
+    -@messages.each do |a|
+      %tr
+        %td.tabel
+          =# User.find(a.sender_id).accountInformation.nume
+          =# User.find(a.sender_id).accountInformation.prenume
+        %td.tabel= a.subject
+        - if a.r == 1
+          %td.tabel citit
+        - else
+          %td.tabel necitit
+        %td.tabel
+          =link_to "citire", user_message_path(@user,a), {:style => "padding: 2px 3px;margin: 2px;", :class => "link_button"} 
+          =link_to "raspunde", new_user_message_path(a.sender_id), {:style => "padding: 2px 3px;margin: 2px;" ,:class => "link_button"} 
+          =link_to "stergere", user_message_path(@user,a), {:style => "padding: 2px 3px;margin: 2px;" ,:method => :delete, :class => "link_button"} 
+    

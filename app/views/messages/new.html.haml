@@ -1,0 +1,17 @@
+=render "/shared/user_menu"
+%div{:style => "width:480px;margin-left:340px;text-align:left;"}
+  -form_for [@user,@message] do |f|
+    %div.message_header
+      Expeditor:
+      =current_user.accountInformation.nume
+      =current_user.accountInformation.prenume
+      =f.hidden_field :sender_id, :value => current_user.id
+      =f.hidden_field :user_id, :value => params[:user_id]
+    %div.message_header
+      =f.label "Subiect:"
+      =f.text_field :subject
+    %div.message{:style => "text-align:center;"}
+      =f.text_area :message
+      %br
+      =f.submit "Trimitere"
+ 

@@ -1,0 +1,36 @@
+= render "shared/user_menu"
+- if flash[:notice]
+  %div{:class=> "notice", :style => "text-align:center;"}
+    =flash[:notice]
+    
+%table{:style => "width:682px;margin-left:240px;text-align:left;"}
+  %tr
+    %td.tabel Nume
+    %td.tabel= @info.nume
+  %tr
+    %td.tabel Prenume
+    %td.tabel= @info.prenume
+  %tr
+    %td.tabel Promotia
+    %td.tabel= @info.promotia
+  %tr
+    %td.tabel Specializare (facultate)
+    %td.tabel= @info.specializare
+  %tr
+    %td.tabel Docmeniu de activitate
+    %td.tabel= @info.domeniucurent
+  %tr
+    %td.tabel Adresa
+    %td.tabel= @info.adresa
+  %tr
+    %td.tabel Email
+    %td.tabel= @info.email
+  %tr
+    %td.tabel Ati fi interesat(a) sa participati la intalniri cu actuali elevi ai liceului, in vederea impartasirii experientei d-voastra profesionala si/sau personala dupa absolvire? 
+    %td.tabel= @info.cariera == 1?"Da":"Nu"
+  %tr
+    %td.tabel Ati fi dispus(a) sa colaborati ca mentor cu un actual elev al liceului?
+    %td.tabel= @info.mentor == 1?"Da":"Nu"
+
+  %tr
+    %td{:align => "center", :colspan =>2}=link_to "Modificare", edit_user_accountInformation_path, {:class => "link_button"} 

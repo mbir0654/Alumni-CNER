@@ -1,0 +1,19 @@
+= render "/shared/user_menu"
+- if flash[:notice]
+  %div.notice
+    =flash[:notice]    
+%table{:style => "margin-left:340px;text-align:left;"}
+  - form_for @user do |f|
+    - if f.error_messages != ""
+      %div.error= f.error_messages
+    %tr.newuser
+      %td.newuser= f.label "Nume utilizator"
+      %td.newuser= @user.username
+    %tr.newuser
+      %td.newuser= f.label "Parola"
+      %td.newuser= f.password_field :password
+    %tr.newuser
+      %td.newuser= f.label "Confirmarea parolei"
+      %td.newuser= f.password_field :password_confirmation
+    %tr.newuser 
+      %td.newuser{:style => "text-align:center;",:colspan =>2}= f.submit "Salvare" 

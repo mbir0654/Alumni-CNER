@@ -1,0 +1,24 @@
+=render "/shared/user_menu"
+- if @total == 0
+  %div.notice 
+    Nu exista absolventi inscrisi din promotia 
+    =@promotia
+- else
+  %table{:style => "width:680px;margin-left:240px;text-align:left;"}
+    -if @total>10
+      %div.paginate
+        =will_paginate @info
+    %tr
+      %th.tabel Nume
+      %th.tabel Prenume
+      %th.tabel Specializare
+      %th.tabel Domeniu curent
+      %th.tabel 
+    -@info.each do |i|
+      %tr
+        %td.tabel= i.nume
+        %td.tabel= i.prenume
+        %td.tabel= i.specializare
+        %td.tabel= i.domeniucurent
+        %td.tabel
+          =link_to "trimitere mesaj", new_user_message_path(i.user_id)

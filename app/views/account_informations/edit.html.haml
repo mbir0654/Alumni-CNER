@@ -1,0 +1,49 @@
+= render "shared/user_menu"
+- if flash[:notice]
+  %div{:class=> "notice", :style => "text-align:center;"}
+    =flash[:notice]
+- form_for [@user,@info], :url => user_accountInformation_path(@user), :action=>"update" do |f|
+  =f.error_messages
+  %table{:style => "width:682px;margin-left:240px;text-align:left;"}
+    %tr
+      %td.tabel= f.label :nume
+      %td.tabel= f.text_field :nume
+    %tr
+      %td.tabel= f.label :prenume
+      %td.tabel= f.text_field :prenume  
+    %tr
+      %td.tabel= f.label :promotia
+      %td.tabel= f.text_field :promotia
+    %tr
+      %td.tabel= f.label "Specializare (facultate)"
+      %td.tabel= f.text_field :specializare
+    %tr
+      %td.tabel= f.label "Docmeniu de activitate"
+      %td.tabel= f.text_field :domeniucurent
+    %tr
+      %td.tabel= f.label :adresa
+      %td.tabel= f.text_field :adresa
+    %tr
+      %td.tabel= f.label :email
+      %td.tabel= f.text_field :email
+    %tr
+      %td.tabel= f.label "Ati fi interesat(a) sa participati la intalniri cu actuali elevi ai liceului, in vederea impartasirii experientei d-voastra profesionala si/sau personala dupa absolvire?"
+      %td.tabel
+        Da
+        = f.radio_button :cariera, "1", :style => "width: 20px;"
+        %br
+        Nu
+        = f.radio_button :cariera, "0", :style => "width: 20px;"
+
+    %tr
+      %td.tabel= f.label "Ati fi dispus(a) sa colaborati ca mentor cu un actual elev al liceului?"
+      %td.tabel
+        Da
+        = f.radio_button :mentor, "1", :style => "width: 20px;"
+        %br
+        Nu
+        = f.radio_button :mentor, "0", :style => "width: 20px;"
+
+      
+    %tr
+      %td{:colspan =>2, :class=>"tabel_bottom", :style => "text-align:center;"}= f.submit "Salvare"

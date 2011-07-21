@@ -1,0 +1,12 @@
+%table{:style => "margin-left:auto;margin-right:auto;text-align:left;"}
+  - form_for @user_session do |f|
+    - if f.error_messages != ""
+      %div.error= f.error_messages
+    %tr.newuser
+      %td.newuser= f.label "Nume utilizator"
+      %td.newuser= f.text_field :username
+    %tr.newuser
+      %td.newuser= f.label "Parola"
+      %td.newuser= f.password_field :password
+    %tr.newuser
+      %td.newuser{:style => "text-align:center;",:colspan =>2}= f.submit "Autentificare"

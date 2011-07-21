@@ -1,0 +1,62 @@
+%div{:class => "text4", :style => "text-align:center;font-size:16px; font-weight:bold"}
+  Ateliere
+%br
+- if flash[:notice] != "" && flash[:notice] != nil
+  %div{:class => "text4"}
+    =flash[:notice]
+  %br
+%div{:class => "text4"}
+  In perioada aprilie-iunie 2011, CNER Alumni organizeaza o serie de ateliere tematice deschise elevilor racovitisti. Atelierele vor fi urmatoarele:
+  %br
+  %br
+  %div{:style => "font-weight: bold;"}
+    1. Scrierea unui CV si a unei scrisori de intentie
+  %div
+    %span{:style=>"font-style: oblique;"}o sedinta, sambata, 9 aprilie 2011, ora 10:30, sala 9
+    %br
+    %span{:style=>"font-weight:bold;"}Descriere: 
+    Veti invata sa va formulati CV-ul si scrisoarea de intentie intr-un mod adecvat mediului profesional si academic (cautari de job, aplicatii in strainatate, postulari pentru burse). Se vor da exemple concrete si se va lucra direct pe materialele fiecaruia in parte.
+    %br
+    %span{:style=>"font-weight:bold;"}Inscriere: 
+    Completand formularul de mai jos si trimitand un CV si o scurta scrisoare de intentie (fictiva, folosita anterior sau scrisa special pentru acest atelier) la adresa cner.alumni@gmail.com.
+    %br
+    %span{:style=>"font-style: oblique;"}Termen limita pentru inscrieri: 7 aprilie 2011
+  %br
+  %div{:style => "font-weight: bold;"}
+    2. Scrierea de proiecte
+  %div
+    %span{:style => "font-weight: bold; color: red;"} AMANAT
+    -#%span{:style=>"font-style: oblique;"}3 sedinte, 30 aprilie, 7 mai, 21 mai 2011, ora 10:30, sala 9
+    %br
+    %span{:style=>"font-weight:bold;"}Descriere:
+    Vi se va oferi o viziune completa asupra procesului de scriere a unui proiect in cadrul unei organizatii de tineret, de la ce oportunitati exista pana la cum trebuie completate formularele. Atelierul isi propune sa atraga in special (dar nu numai) membri ai Consiliului Elevilor, care vor putea aplica pentru fonduri prin Asociatia CNER chiar de la 1 iunie 2011.
+    %br
+    %span{:style=>"font-weight:bold;"}Inscriere:
+    Completand formularul de mai jos si trimitand o scrisoare de intentie la adresa cner.alumni@gmail.com, descriind cum veti beneficia de acest atelier.
+    %br
+    %span{:style=>"font-style: oblique;"}Termen limita pentru inscrieri: 28 aprilie 2011
+  %br
+  %div
+    %span{:style => "font-weight: bold;"}
+      3. Academic writing 
+      (atelier desfasurat in limba engleza)
+  %div
+    %span{:style=>"font-weight:bold; color:red;"}AMANAT
+    %br
+    %span{:style=>"font-weight:bold;"}Descriere:
+    Detailed advice and tips on how to improve your writing in English, mainly for academic purposes (essays, official letters, research papers). During the workshop, we will analyze examples of good and bad writing, come up with a basic list of rules to follow, after which you will each work on improving one of your own pieces of writing. Students who have participated in or who want to participate in English-language competitions are especially encouraged to apply.
+    %br
+    %span{:style=>"font-weight:bold;"}Inscriere:
+    Send a sample of your writing (half a page to one page in length) by email to cner.alumni@gmail.com.
+    %br
+    %span{:style=>"font-style: oblique;"}Termen limita pentru inscrieri: 28 aprilie 2011
+%br
+%div{:class => "text4"}
+  Numarul de locuri e limitat. Aveti optiunea de a va inscrie pentru toate aceste ateliere, insa vom distribui locurile in functie de numarul si promptitudinea celor inscrisi.
+%br
+%div{:class => "text4", :style => "text-align:center; font-size:14px; font-weight:bold"}
+  =link_to "Inscrie-te!", new_workshopregs_path
+- if current_user && current_user.role == "admin"
+  %br
+  %div{:class => "text4", :style => "text-align:center; font-size:14px; font-weight:bold"}
+    =link_to "Elevi Inscrisi", "/workshopreg/all"

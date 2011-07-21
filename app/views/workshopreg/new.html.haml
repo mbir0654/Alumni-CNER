@@ -1,0 +1,34 @@
+%table{:style => "width:75%; margin-left:auto;margin-right:auto;text-align:left;"}
+  - if flash[:notice] != "" && flash[:notice] != nil
+    %tr{:class => "text4"}
+      %td{:style => "text-indent:0px; text-align:center; padding:10px;", :colspan => 2}=flash[:notice]
+  -form_for @reg do |f|
+    - if f.error_messages != ""
+      %div.error= f.error_messages
+      %br
+    %tr
+      %td.newuser= f.label "Numele si prenumele"
+      %td.newuser= f.text_field :nume
+    %tr
+      %td.newuser= f.label "Clasa"
+      %td.newuser= f.text_field :clasa
+    %tr
+      %td.newuser= f.label "Email"
+      %td.newuser= f.text_field :email
+    %tr
+      %td.newuser= f.label "Optiunea 1"
+      %td.newuser= f.select :opt1, [["", 0], ["Scriere CV si scrisoare de intentie",1], ["Scriere de proiecte",2], ["Academic writing",3]]
+    %tr
+      %td.newuser= f.label "Optiunea 2"      
+      %td.newuser= f.select :opt2, [["", 0], ["Scriere CV si scrisoare de intentie",1], ["Scriere de proiecte",2], ["Academic writing",3]]
+    %tr
+      %td.newuser= f.label "Optiunea 3"      
+      %td.newuser= f.select :opt3, [["", 0], ["Scriere CV si scrisoare de intentie",1], ["Scriere de proiecte",2], ["Academic writing",3]]
+    %tr
+      %td.newuser{:style => "text-align:center;",:colspan =>2}
+        %span{:style => "font-weight:bold;"}Nu uitati:
+        Inscrierea voastra nu va fi considerata completa pana nu trimiteti materialele aditionale la adresa cner.alumni@gmail.com. Mentionati in subiectul email-ului pentru care atelier doriti inscrierea.
+    %tr
+      %td.newuser{:style => "text-align:center;",:colspan =>2}= f.submit "Inscriere"
+    
+     
